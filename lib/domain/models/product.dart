@@ -4,6 +4,14 @@ class Product {
   final int amount;
   final String partNumber;
   final String description;
+  final String image;
 
-  Product(this.name, this.price, this.amount, this.partNumber, this.description);
+  Product({
+    required this.name,
+    required this.price,
+    required this.amount,
+    required this.partNumber,
+    required this.description,
+    required this.image,
+  });
 }

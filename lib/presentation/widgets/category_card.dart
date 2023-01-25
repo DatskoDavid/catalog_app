@@ -4,7 +4,6 @@ import 'package:catalog_app/utils/constants/dimens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 import '../../domain/models/category.dart';
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/text_styles.dart';
@@ -32,6 +31,7 @@ class CategoryCard extends StatelessWidget {
         child: Stack(
           children: [
             Container(
+              //TODO: remake to AppDimens.value
               margin: EdgeInsets.symmetric(vertical: 2.3.h),
               width: double.infinity,
               height: double.infinity,
@@ -42,8 +42,7 @@ class CategoryCard extends StatelessWidget {
             ),
             Positioned(
               child: SizedBox(
-                // height: 100.h,
-                height: 170.h,
+                height: 100.h,
                 width: double.infinity,
                 child: ClipRRect(
                   /* borderRadius: const BorderRadius.only(
