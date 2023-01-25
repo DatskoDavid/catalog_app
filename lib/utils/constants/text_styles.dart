@@ -17,8 +17,14 @@ final kProductCardTitle = TextStyle(
   fontWeight: FontWeight.w700,
 );
 
+final kProductCardPrice = TextStyle(
+  fontSize: 16.sp,
+  fontWeight: FontWeight.w700,
+  color: AppColors.kProductPriceColor,
+);
+
 final kProductCardDescription = TextStyle(
   fontSize: 13.sp,
   fontWeight: FontWeight.w200,
-  color: Colors.grey,
+  color: AppColors.kCaptionTextColor,
 );

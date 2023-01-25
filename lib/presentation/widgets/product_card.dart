@@ -21,7 +21,7 @@ class ProductCard extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const ProductScreen();
+              return ProductScreen(product: product);
             },
           ),
         );
@@ -32,7 +32,7 @@ class ProductCard extends StatelessWidget {
           horizontal: AppDimens.normal,
         ),
         decoration: BoxDecoration(
-          color: kCategoryCardColor,
+          color: AppColors.kCategoryCardColor,
           borderRadius: BorderRadius.circular(AppRadius.medium),
         ),
         child: Center(
@@ -61,8 +61,8 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
               Text(
-                '${product.price} \$',
-                style: kProductCardTitle,
+                '\$${product.price}',
+                style: kProductCardPrice,
               ),
             ],
           ),

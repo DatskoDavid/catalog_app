@@ -31,18 +31,16 @@ class CategoryCard extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              //TODO: remake to AppDimens.value
-              margin: EdgeInsets.symmetric(vertical: 2.3.h),
               width: double.infinity,
               height: double.infinity,
               decoration: BoxDecoration(
-                color: kCategoryCardColor,
+                color: AppColors.kCategoryCardColor,
                 borderRadius: BorderRadius.circular(AppRadius.medium),
               ),
             ),
             Positioned(
               child: SizedBox(
-                height: 100.h,
+                height: 125.h,
                 width: double.infinity,
                 child: ClipRRect(
                   /* borderRadius: const BorderRadius.only(
@@ -62,7 +60,7 @@ class CategoryCard extends StatelessWidget {
             ),
             Positioned(
               left: 18.w,
-              bottom: 10.h,
+              bottom: 8.h,
               child: AutoSizeText(
                 category.name,
                 maxLines: 1,
