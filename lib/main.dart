@@ -1,14 +1,8 @@
-import 'package:catalog_app/presentation/screens/home_screen.dart';
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
-/* void main() => runApp(
-      DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => const MyApp(), // Wrap your app
-      ),
-    ); */
+import 'presentation/screens/home_screen.dart';
+
 void main() => runApp(
       const MyApp(),
     );
@@ -18,21 +12,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(360, 690),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context, child) {
-        return MaterialApp(
-          locale: DevicePreview.locale(context),
-          useInheritedMediaQuery: true,
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.indigo,
-          ),
-          home: const HomeScreen(),
-        );
-      },
+    return MaterialApp(
+      builder: (context, child) => ResponsiveWrapper.builder(
+        BouncingScrollWrapper.builder(context, child!),
+        maxWidth: 1200,
+        minWidth: 450,
+        defaultScale: true,
+        breakpoints: [
+          const ResponsiveBreakpoint.resize(450, name: MOBILE),
+          const ResponsiveBreakpoint.autoScale(800, name: TABLET),
+          const ResponsiveBreakpoint.autoScale(1000, name: TABLET),
+          const ResponsiveBreakpoint.resize(1200, name: DESKTOP),
+          const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
+        ],
+      ),
+
+      home: const HomeScreen(),
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+      ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

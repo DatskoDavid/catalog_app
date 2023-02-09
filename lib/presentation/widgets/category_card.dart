@@ -1,8 +1,7 @@
-import 'package:auto_size_text/auto_size_text.dart';
+
 import 'package:catalog_app/presentation/screens/category_screen.dart';
 import 'package:catalog_app/utils/constants/dimens.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../domain/models/category.dart';
 import '../../utils/constants/colors.dart';
@@ -27,7 +26,8 @@ class CategoryCard extends StatelessWidget {
         );
       },
       child: SizedBox(
-        height: 23.h,
+        // height: 23.h,
+        // height: 23,
         child: Stack(
           children: [
             Container(
@@ -40,7 +40,8 @@ class CategoryCard extends StatelessWidget {
             ),
             Positioned(
               child: SizedBox(
-                height: 125.h,
+                // height: 125.h,
+                height: MediaQuery.of(context).size.height * 0.28,
                 width: double.infinity,
                 child: ClipRRect(
                   /* borderRadius: const BorderRadius.only(
@@ -59,11 +60,12 @@ class CategoryCard extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 18.w,
-              bottom: 8.h,
-              child: AutoSizeText(
+              /* left: 18.w,
+              bottom: 8.h, */
+              left: 18,
+              bottom: 8,
+              child: Text(
                 category.name,
-                maxLines: 1,
                 style: kCategoryHeader,
               ),
             ),

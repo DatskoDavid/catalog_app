@@ -26,20 +26,6 @@ class HomeScreen extends StatelessWidget {
             child: CategoryCard(category: categories[index]),
           ),
         ),
-        
-        /* body: GridView.count(
-          padding: const EdgeInsets.all(AppDimens.big),
-          mainAxisSpacing: 20,
-          crossAxisSpacing: 20,
-          crossAxisCount: 2,
-          children: [
-            CategoryCard(category: categories[0]),
-            CategoryCard(category: categories[1]),
-            CategoryCard(category: categories[2]),
-            CategoryCard(category: categories[3]),
-          ],
-        ), */
-        
       ),
     );
   }

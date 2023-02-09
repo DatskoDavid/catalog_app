@@ -3,7 +3,6 @@ import 'package:catalog_app/domain/models/product.dart';
 import 'package:catalog_app/utils/constants/dimens.dart';
 import 'package:catalog_app/utils/constants/text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductScreen extends StatelessWidget {
   final Product product;
@@ -22,7 +21,8 @@ class ProductScreen extends StatelessWidget {
           padding: const EdgeInsets.all(AppDimens.normal),
           children: [
             SizedBox(
-              height: 200.h,
+              // height: 200.h,
+              height: 200,
               child: ClipRRect(
                 borderRadius: const BorderRadius.all(
                   Radius.circular(AppRadius.medium),

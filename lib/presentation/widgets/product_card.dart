@@ -2,7 +2,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:catalog_app/utils/constants/colors.dart';
 import 'package:catalog_app/utils/constants/dimens.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../domain/models/product.dart';
 import '../../utils/constants/text_styles.dart';
@@ -39,7 +38,8 @@ class ProductCard extends StatelessWidget {
           child: Row(
             children: [
               SizedBox(
-                height: 70.h,
+                // height: 70.h,
+                height: 70,
                 child: Image.asset(
                   product.image,
                 ),
