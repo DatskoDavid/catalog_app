@@ -50,19 +50,19 @@ class ProductCard extends StatelessWidget {
                   children: [
                     Text(
                       product.name,
-                      style: kProductCardTitle,
+                      style: AppTextStyles.productCardTitle,
                     ),
                     AutoSizeText(
                       maxLines: 1,
                       product.description,
-                      style: kProductCardDescription,
+                      style: AppTextStyles.productCardDescription,
                     ),
                   ],
                 ),
               ),
               Text(
                 '\$${product.price}',
-                style: kProductCardPrice,
+                style: AppTextStyles.productCardPrice,
               ),
             ],
           ),

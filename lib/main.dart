@@ -1,3 +1,4 @@
+import 'package:catalog_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -26,10 +27,9 @@ class MyApp extends StatelessWidget {
           const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
         ],
       ),
-
-      home: const HomeScreen(),
+      home: HomeScreen(),
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: AppColors.kPrimaryColor,
       ),
       debugShowCheckedModeBanner: false,
     );

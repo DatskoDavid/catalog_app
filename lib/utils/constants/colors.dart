@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
-  static const kPrimaryColor = Color.fromARGB(255, 65, 82, 182);
+  static const kPrimaryColor = Colors.indigo;
+
+  static const kWhiteColor = Colors.white;
 
   static const kCategoryCardColor = Color.fromARGB(255, 235, 235, 235);
 
