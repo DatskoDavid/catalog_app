@@ -1,8 +1,8 @@
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:catalog_app/domain/models/product.dart';
 import 'package:catalog_app/utils/constants/dimens.dart';
 import 'package:catalog_app/utils/constants/text_styles.dart';
 import 'package:flutter/material.dart';
+
+import '../../domain/models/product.dart';
 
 class ProductScreen extends StatelessWidget {
   final Product product;
@@ -14,7 +14,7 @@ class ProductScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(product.name),
+          title: Text(product.product),
           centerTitle: true,
         ),
         body: ListView(
@@ -27,31 +27,43 @@ class ProductScreen extends StatelessWidget {
                 borderRadius: const BorderRadius.all(
                   Radius.circular(AppRadius.medium),
                 ),
-                child: Image.asset(product.image),
+                child: Image.asset('assets/images/iPhone12.png'),
               ),
             ),
-            /*  Center(
+            Center(
               child: Text(
-                product.name,
-                style: kCategoryHeader,
+                product.product,
+                style: AppTextStyles.productHeader,
               ),
-            ), */
-            _getPadding(AppDimens.tiny),
+            ),
+            /* _getPadding(AppDimens.large),
             Text(
               'Price: \$${product.price}',
-              style: AppTextStyles.categoryHeader,
+              style: AppTextStyles.productProperties,
             ),
-            _getPadding(AppDimens.tiny),
+            _getPadding(AppDimens.small),
             Text(
-              'Amount: ${product.amount}',
-              style: AppTextStyles.categoryHeader,
+              'Stock: ${product.stock}',
+              style: AppTextStyles.productProperties,
             ),
-            _getPadding(AppDimens.big),
-            const AutoSizeText(
-              '''Descrition: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.''',
-              style: AppTextStyles.productDescription,
-              maxLines: 10,
-            ),
+            _getPadding(AppDimens.small),
+            Text(
+              'EAN: ${product.ean}',
+              style: AppTextStyles.productProperties,
+            ), */
+            _getPadding(AppDimens.large),
+            _productProperties(context, 'Price', product.price),
+            _getPadding(AppDimens.small),
+            _productProperties(context, 'Stock', product.stock),
+            _getPadding(AppDimens.small),
+            _productProperties(context, 'EAN', product.ean),
+            /*  _getPadding(AppDimens.extraLarge),
+            _getPadding(AppDimens.extraLarge),
+            _getProductProperty(context, 'Price', product.price),
+            _getPadding(AppDimens.small),
+            _getProductProperty(context, 'Stock', product.stock),
+            _getPadding(AppDimens.small),
+            _getProductProperty(context, 'EAN', product.ean), */
           ],
         ),
       ),
@@ -60,5 +72,60 @@ class ProductScreen extends StatelessWidget {
 
   Widget _getPadding(double height) {
     return SizedBox(height: height);
+  }
+
+  Widget _productProperties(BuildContext context, String title, num value) {
+    return Padding(
+      padding: EdgeInsets.only(right: MediaQuery.of(context).size.width * 0.4),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            '$title:',
+            style: AppTextStyles.productProperties,
+          ),
+          const SizedBox(width: AppDimens.large),
+          Text(
+            title == 'Price' ? '\$$value' : '$value',
+            style: AppTextStyles.productProperties,
+            overflow: TextOverflow.clip,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _getProductProperty(BuildContext context, String title, num value) {
+    return Center(
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.5,
+        padding: const EdgeInsets.symmetric(
+            vertical: AppDimens.midSmallNormal, horizontal: 45),
+        decoration: BoxDecoration(
+          border:
+              Border.all(color: Color.fromARGB(255, 199, 199, 199), width: 2),
+          color: const Color.fromARGB(255, 206, 204, 204),
+          borderRadius: BorderRadius.circular(AppRadius.tiny),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              '$title:',
+              style: AppTextStyles.productProperties,
+            ),
+            const SizedBox(width: AppDimens.large),
+            SizedBox(
+              width: 50,
+              child: Text(
+                title == 'Price' ? '\$$value' : '$value',
+                style: AppTextStyles.productProperties,
+                overflow: TextOverflow.clip,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

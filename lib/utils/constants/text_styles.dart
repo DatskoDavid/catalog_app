@@ -8,10 +8,17 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w700,
   );
 
-  static const productDescription = TextStyle(
+  static const productHeader = TextStyle(
+    // fontSize: 15.sp,
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const productProperties = TextStyle(
     // fontSize: 16.sp,
-    fontSize: 16,
-    fontWeight: FontWeight.w400,
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+    color: AppColors.kProductPriceColor,
   );
 
   static const productCardTitle = TextStyle(

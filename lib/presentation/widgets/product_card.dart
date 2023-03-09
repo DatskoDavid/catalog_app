@@ -40,29 +40,29 @@ class ProductCard extends StatelessWidget {
               SizedBox(
                 // height: 70.h,
                 height: 70,
-                child: Image.asset(
-                  product.image,
-                ),
+                child: Image.asset('assets/images/iPhone12.png'),
               ),
-              Expanded(
+              Flexible(
+                flex: 12,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      product.name,
+                      product.product,
                       style: AppTextStyles.productCardTitle,
-                    ),
-                    AutoSizeText(
-                      maxLines: 1,
-                      product.description,
-                      style: AppTextStyles.productCardDescription,
                     ),
                   ],
                 ),
               ),
-              Text(
-                '\$${product.price}',
-                style: AppTextStyles.productCardPrice,
+              const Spacer(),
+              Flexible(
+                flex: 2,
+                child: AutoSizeText(
+                  // '\$${product.price}',
+                  '\$${product.price.toStringAsFixed(0)}',
+                  style: AppTextStyles.productCardPrice,
+                  maxLines: 1,
+                ),
               ),
             ],
           ),

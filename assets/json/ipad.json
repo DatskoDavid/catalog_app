@@ -1,0 +1,114 @@
+[
+ {
+  "code": "GA-00753230",
+  "partNumber": "MK493FD\/A",
+  "ean": 194252521618,
+  "product": "Apple iPad - 10.2 2021  64GB WiFil + Cell Silver MK493",
+  "stock": 20,
+  "price": 470.66
+ },
+ {
+  "code": "GA-00751999",
+  "partNumber": "MK2K3TY\/A",
+  "ean": 194252515754,
+  "product": "Apple iPad - 10.2 2021  64GB WiFil Space Grey MK2K3",
+  "stock": 412,
+  "price": 336.23
+ },
+ {
+  "code": "GA-00751998",
+  "partNumber": "MK2P3TY\/A",
+  "ean": 194252516836,
+  "product": "Apple iPad - 10.2 2021 256GB WiFil Silver MK2P3",
+  "stock": 64,
+  "price": 537.35
+ },
+ {
+  "code": "GA-00753485",
+  "partNumber": "MK2K3TY\/A",
+  "ean": 194252516560,
+  "product": "Apple iPad - 10.2 2021 256GB WiFil Space Grey MK2N3",
+  "stock": 12,
+  "price": 494.38
+ },
+ {
+  "code": "GA-00936814",
+  "partNumber": "MM723TY\/A",
+  "ean": 194252809006,
+  "product": "Apple iPad - Air 10.9 2022 256GB WiFi + Cell Rose MM723",
+  "stock": 10,
+  "price": 1001.49
+ },
+ {
+  "code": "GA-00936824",
+  "partNumber": "MM9M3TY\/A",
+  "ean": 194252797129,
+  "product": "Apple iPad - Air 10.9 2022 256GB WiFi Rose MM9M3",
+  "stock": 10,
+  "price": 764.03
+ },
+ {
+  "code": "GA-00936819",
+  "partNumber": "MME93TY\/A",
+  "ean": 194252834909,
+  "product": "Apple iPad - Air 10.9 2022 64GB WiFi + Cell Purple MME93",
+  "stock": 15,
+  "price": 829.59
+ },
+ {
+  "code": "GA-00936817",
+  "partNumber": "MM6T3TY\/A",
+  "ean": 194252806609,
+  "product": "Apple iPad - Air 10.9 2022 64GB WiFi + Cell Rose MM6T3",
+  "stock": 34,
+  "price": 829.59
+ },
+ {
+  "code": "GA-01300081",
+  "partNumber": "MPQ13TY\/A",
+  "ean": 194253387817,
+  "product": "Apple iPad - Air 10.9 2022 64GB WiFi Blue MPQ13",
+  "stock": 25,
+  "price": 455.3
+ },
+ {
+  "code": "GA-01300082",
+  "partNumber": "MPQ03TY\/A",
+  "ean": 194253387541,
+  "product": "Apple iPad - Air 10.9 2022 64GB WiFi Silver MPQ03",
+  "stock": 19,
+  "price": 455.3
+ },
+ {
+  "code": "GA-00742760",
+  "partNumber": "MK893TY\/A",
+  "ean": 194252507704,
+  "product": "Apple iPad - Mini 2021 6th 8.3  64GB WiFi + Cell Space Grey MK893",
+  "stock": 11,
+  "price": 668.36
+ },
+ {
+  "code": "GA-00742763",
+  "partNumber": "MK7V3TY\/A",
+  "ean": 194252529416,
+  "product": "Apple iPad - Mini 2021 6th 8.3 256GB WiFi Starlight MK7V3",
+  "stock": 42,
+  "price": 726.43
+ },
+ {
+  "code": "GA-00704882",
+  "partNumber": "MHR33TY\/A",
+  "ean": 194252187883,
+  "product": "Apple iPad - Pro 11 2021 2TB WiFi Silver MHR33",
+  "stock": 14,
+  "price": 1792.23
+ },
+ {
+  "code": "GA-00704881",
+  "partNumber": "MHR23TY\/A",
+  "ean": 194252187616,
+  "product": "Apple iPad - Pro 11 2021 2TB WiFi Space Grey MHR23",
+  "stock": 19,
+  "price": 1792.23
+ }
+]

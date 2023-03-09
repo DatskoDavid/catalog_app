@@ -2,11 +2,14 @@ import 'package:catalog_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import 'domain/di/injector.dart';
 import 'presentation/screens/home_screen.dart';
 
-void main() => runApp(
-      const MyApp(),
-    );
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  initInjector();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
           const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
         ],
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
       theme: ThemeData(
         primarySwatch: AppColors.kPrimaryColor,
       ),
