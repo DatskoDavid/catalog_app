@@ -1,9 +1,9 @@
-import 'package:catalog_app/domain/models/product.dart';
+import '../../data/fake_data.dart';
 
 class MyCategory {
   final String name;
   final String image;
-  final List<Product> products;
+  final List<FakeProduct> products;
 
   MyCategory({
     required this.name,
