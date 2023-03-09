@@ -13,8 +13,8 @@ final categories = <MyCategory>[
   MyCategory(name: 'PC', image: 'assets/images/pc.jpg', products: products),
 ];
 
-final products = <Product>[
-  Product(
+final products = <FakeProduct>[
+  FakeProduct(
     name: "iPhone 12 Pro",
     price: 999,
     amount: 1000,
@@ -22,7 +22,7 @@ final products = <Product>[
     description: 'Apple iPhone 12th generation',
     image: 'assets/images/iPhone12.png',
   ),
-  Product(
+  FakeProduct(
     name: "Acer Aspire 5",
     price: 500,
     amount: 500,
@@ -30,7 +30,7 @@ final products = <Product>[
     description: 'Xiaomi Redmi Note 7',
     image: 'assets/images/iPhone12.png',
   ),
-  Product(
+  FakeProduct(
     name: "Xiaomi Redmi Note 7",
     price: 300,
     amount: 1000,
@@ -38,7 +38,7 @@ final products = <Product>[
     description: 'Acer Aspire 5',
     image: 'assets/images/iPhone12.png',
   ),
-  Product(
+  FakeProduct(
     name: "iPhone 12 Pro",
     price: 999,
     amount: 1000,
@@ -46,7 +46,7 @@ final products = <Product>[
     description: 'Apple iPhone 12th generation',
     image: 'assets/images/iPhone12.png',
   ),
-  Product(
+  FakeProduct(
     name: "Mac M1",
     price: 5000,
     amount: 1000,
@@ -55,3 +55,21 @@ final products = <Product>[
     image: 'assets/images/iPhone12.png',
   ),
 ];
+
+class FakeProduct {
+  final String name;
+  final int price;
+  final int amount;
+  final String partNumber;
+  final String description;
+  final String image;
+
+  FakeProduct({
+    required this.name,
+    required this.price,
+    required this.amount,
+    required this.partNumber,
+    required this.description,
+    required this.image,
+  });
+}
