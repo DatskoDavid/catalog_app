@@ -57,8 +57,8 @@ class ProductScreen extends StatelessWidget {
             _productProperties(context, 'Stock', product.stock),
             _getPadding(AppDimens.small),
             _productProperties(context, 'EAN', product.ean),
-            /*  _getPadding(AppDimens.extraLarge),
             _getPadding(AppDimens.extraLarge),
+            /* _getPadding(AppDimens.extraLarge),
             _getProductProperty(context, 'Price', product.price),
             _getPadding(AppDimens.small),
             _getProductProperty(context, 'Stock', product.stock),
@@ -98,7 +98,7 @@ class ProductScreen extends StatelessWidget {
   Widget _getProductProperty(BuildContext context, String title, num value) {
     return Center(
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.5,
+        width: MediaQuery.of(context).size.width * 0.8,
         padding: const EdgeInsets.symmetric(
             vertical: AppDimens.midSmallNormal, horizontal: 45),
         decoration: BoxDecoration(

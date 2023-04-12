@@ -14,6 +14,12 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w700,
   );
 
+  static const searchError = TextStyle(
+    // fontSize: 15.sp,
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+  );
+
   static const productProperties = TextStyle(
     // fontSize: 16.sp,
     fontSize: 18,
@@ -32,6 +38,12 @@ abstract class AppTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.w700,
     color: AppColors.kProductPriceColor,
+  );
+
+  static const searchSuggestion = TextStyle(
+    // fontSize: 16.sp,
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
   );
 
   static const productCardDescription = TextStyle(

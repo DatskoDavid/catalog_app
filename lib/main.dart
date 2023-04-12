@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const HomeScreen(),
       theme: ThemeData(
+        // useMaterial3: true,
         primarySwatch: AppColors.kPrimaryColor,
       ),
       debugShowCheckedModeBanner: false,

@@ -1,4 +1,4 @@
-import 'package:catalog_app/domain/repositories/product_repository.dart';
+import '../../repositories/product_repository.dart';
 
 import '../../models/product.dart';
 

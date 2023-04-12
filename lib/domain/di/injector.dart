@@ -2,6 +2,7 @@ import 'package:catalog_app/data/data_source/remote_data_source.dart';
 import 'package:catalog_app/data/repositories/product_repository_impl.dart';
 import 'package:catalog_app/domain/use_cases/product/get_all_products.dart';
 import 'package:catalog_app/presentation/bloc/product_bloc/product_bloc.dart';
+import 'package:catalog_app/presentation/bloc/search_bloc/search_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 import '../repositories/product_repository.dart';
@@ -29,4 +30,5 @@ void _initUsecases() {
 
 void _initBlocs() {
   i.registerSingleton<ProductBloc>(ProductBloc(i.get()));
+  i.registerSingleton<ProductSearchBloc>(ProductSearchBloc(i.get()));
 }
